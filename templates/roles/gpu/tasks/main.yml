@@ -49,15 +49,6 @@
     state: latest
     update_cache: yes
 
-- name: Create jenkins user
-  user:
-    name: jenkins
-    groups:
-      - docker
-      - wheel
-    uid: 10000
-    append: yes
-
 - name: Add authorized keys
   authorized_key:
     user: jenkins

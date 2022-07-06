@@ -16,9 +16,9 @@ logger "Check mounts"
 mount
 df -h
 
-logger "Ensure ubuntu user has full rights on directory for Jenkins work"
+logger "Ensure jenkins user has full rights on directory for Jenkins work"
 sudo mkdir -p /jenkins
-sudo chown -R ubuntu:ubuntu /jenkins
+sudo chown -R jenkins:jenkins /jenkins
 
 logger "Override docker setup and utilize internal docker registry mirror"
 sudo service docker stop

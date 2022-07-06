@@ -13,9 +13,9 @@ sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get clean
 mount
 df -h
 
-# Ensure ubuntu user has full rights on directory for Jenkins work
+# Ensure jenkins user has full rights on directory for Jenkins work
 sudo mkdir -p /jenkins
-sudo chown -R ubuntu:ubuntu /jenkins
+sudo chown -R jenkins:jenkins /jenkins
 
 # Override docker setup and utilize internal docker registry mirror
 sudo service docker stop

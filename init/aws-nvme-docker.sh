@@ -26,8 +26,8 @@ logger "Check mounts"
 mount
 df -h
 
-logger "Ensure ubuntu user has full rights on directory for Jenkins work"
-sudo chown -R ubuntu:ubuntu /jenkins
+logger "Ensure jenkins user has full rights on directory for Jenkins work"
+sudo chown -R jenkins:jenkins /jenkins
 
 logger "Relocate /tmp to NVMe for faster perf"
 if [ ! -d "/jenkins/tmp" ] ; then
